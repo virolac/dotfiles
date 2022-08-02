@@ -1,0 +1,79 @@
+# reload configuration
+super + shift + r
+    bspc wm -r
+
+# reload sxhkd
+super + shift + Escape
+    pkill -USR1 -x sxhkd
+
+# open the program launcher
+super + slash
+    rofi -show run
+
+# close the focused window
+super + shift + c
+    bspc node -c
+
+# set the window state
+super + {t,shift + t,s,f}
+    bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# focus or move the node in the given direction
+super + {_,shift +}{h,j,k,l}
+    bspc node -{f,s} {west,south,north,east}
+
+# focus or send to the given workspace
+super + {_,shift +}{1-5}
+    bspc {desktop -f,node -d} '^{1-5}'
+
+# expand a window in the given direction
+super + control + {h,j,k,l}
+    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# shrink a window in the given direction
+super + control + shift + {h,j,k,l}
+    bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# balance windows
+super + equal
+    bspc node @/ -B
+
+# toggle a preselection in the given direction
+super + p; {h,j,k,l}
+    bspc node -p \~{west,south,north,east}
+
+# set the ratio for the preselected area
+super + p; {1-9}
+    bspc node -o 0.{1-9}
+
+# move the focused window to the preselected area
+super + p; m
+    bspc node -n 'last.!automatic.local'
+
+# volume control
+XF86AudioMute
+    pulseaudio-ctl mute
+XF86AudioLowerVolume
+    pulseaudio-ctl down +5%
+XF86AudioRaiseVolume
+    pulseaudio-ctl up +5%
+
+# media playback
+XF86AudioPlay
+    playerctl play-pause
+XF86AudioPrev
+    playerctl previous
+XF86AudioNext
+    playerctl next
+
+# launch a terminal
+super + Return
+    GLFW_IM_MODULE=ibus kitty
+
+# launch a web browser window
+super + w
+    google-chrome-stable -incognito
+
+# launch a file browser window
+super + e
+    nautilus
