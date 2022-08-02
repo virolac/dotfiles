@@ -5,7 +5,8 @@ if [ $# -eq 1 ]; then
 else
     CODE=$(fd . ~/Code --min-depth 2 --max-depth 2 --type d)
     CONFIGS=$(fd . ~/.config --min-depth 1 --max-depth 1 --type d)
-    PROJECT_PATH=$(echo -e "$CODE\n$CONFIGS" | fzf)
+    REPOS=$(fd . ~/.repos --min-depth 1 --max-depth 1 --type d)
+    PROJECT_PATH=$(echo -e "$CODE\n$CONFIGS\n$REPOS" | fzf)
 fi
 
 if [ -z $PROJECT_PATH ]; then
