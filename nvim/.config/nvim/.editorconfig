@@ -1,0 +1,132 @@
+[*.lua]
+
+# use spaces
+indent_style = space
+
+# if indent_style is space, this is valid
+indent_size = 2
+
+# use double quotes
+quote_style = double
+
+# only support number
+continuation_indent_size = 2
+
+# use unix line endings
+end_of_line = lf
+
+# default encoding
+charset = "utf-8"
+
+# disable EOL detection
+detect_end_of_line = false
+
+# maximum line length
+max_line_length = 120
+
+# don't put newline at the end of the file
+insert_final_newline = false
+
+# function call expression's args will align to first arg
+align_call_args = true
+
+# all function define params will align to first param
+align_function_define_params = true
+
+# do not remove trailing comma
+remove_expression_list_finish_comma = false
+
+# remove function call parentheses only when the argument is a table
+call_arg_parentheses = remove_table_only
+
+# don't align table field assigments
+continuous_assign_table_field_align_to_equal_sign = false
+
+# format like this "local t = { 1, 2, 3 }"
+keep_one_space_between_table_and_bracket = true
+
+# align table fields to the first one
+align_table_field_to_first_field = false
+
+# don't align chained expression statements
+align_chained_expression_statement = false
+
+# continous line distance
+max_continuous_line_distance = 1
+
+# don't align assignments
+continuous_assign_statement_align_to_equal_sign = true
+
+# don't align if statements like switch statements
+if_condition_align_with_each_other = false
+
+# don't align expressions in local assignments
+local_assign_continuation_align_to_first_expression = false
+
+# keep the current label indentation
+label_no_indent = false
+
+# don't indent in the do statement
+do_statement_no_indent = false
+
+# don't make the conditional expression of the if statement a continuation line indent
+if_condition_no_continuation_indent = false
+
+# don't indent if branch comments after block
+if_branch_comments_after_block_no_indent = false
+
+# don't put a space around '+' in t[#t+1]
+table_append_expression_no_space = false
+
+# don't put a space after the colon in a long chain expression
+long_chain_expression_allow_one_space_after_colon = false
+
+# remove empty header and footer lines in functions
+remove_empty_header_and_footer_lines_in_function = true
+
+# don't put a space before the function open parenthesis
+space_before_function_open_parenthesis = false
+
+# don't put a space before '['
+space_before_open_square_bracket = false
+
+# format like this "local t <const> = 1"
+keep_one_space_between_namedef_and_attribute = true
+
+# The following configuration supports four expressions
+# minLine:${n}
+# keepLine
+# keepLine:${n}
+# maxLine:${n}
+
+keep_line_after_if_statement = minLine:0
+
+keep_line_after_do_statement = minLine:0
+
+keep_line_after_while_statement = minLine:0
+
+keep_line_after_repeat_statement = minLine:0
+
+keep_line_after_for_statement = minLine:0
+
+keep_line_after_local_or_assign_statement = keepLine
+
+keep_line_after_function_define_statement = keepLine:1
+
+keep_line_after_expression_statement = keepLine
+
+# the following is code diagnostic options
+enable_check_codestyle = true
+
+# check the style of names
+enable_name_style_check = true
+
+local_name_define_style = snake_case
+function_param_name_style = snake_case
+function_name_define_style = snake_case
+local_function_name_define_style = snake_case
+table_field_name_define_style = snake_case
+global_variable_name_define_style = upper_snake_case
+module_name_define_style = same(filename, snake_case)
+require_module_name_style = same(filename, snake_case)
+class_name_define_style = same(filename, pascal_case)
