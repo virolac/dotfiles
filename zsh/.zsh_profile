@@ -1,0 +1,24 @@
+# Variables
+
+export XDG_CONFIG_HOME="$HOME/.config"
+
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+export GTK_IM_MODULE="fcitx"
+export QT_IM_MODULE="fcitx"
+export SDL_IM_MODULE="fcitx"
+export XMODIFIERS="@im=fcitx"
+
+# Aliases
+
+alias u="sudo pacman -Syy && sudo pacman -Su"
+alias v="nvim"
+alias ls="logo-ls"
+alias ll="logo-ls -l"
+alias la="logo-ls -la"
+alias tms="tmux-sessionizer"
+
+# Keybindings
+
+bindkey -s ^t "tmux-sessionizer\n"
