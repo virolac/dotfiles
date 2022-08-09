@@ -1,6 +1,6 @@
 require("lualine").setup {
   options = {
-    theme = "palenight",
+    theme = "onenord",
     component_separators = "|",
     section_separators = { left = "", right = "" },
     globalstatus = true,

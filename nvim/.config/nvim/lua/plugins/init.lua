@@ -10,7 +10,7 @@ return require("packer").startup {
     use "wbthomason/packer.nvim"
 
     -- Colorscheme
-    use { "catppuccin/nvim", as = "catppuccin" }
+    use "rmehri01/onenord.nvim"
 
     -- Define keymaps, commands and autocommands while building a legend
     use {
