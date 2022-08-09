@@ -1,8 +1,5 @@
 local set = vim.opt
 
--- Set the leader key
-vim.g.mapleader = " "
-
 -- Global options
 set.termguicolors = true
 set.background = "dark"
@@ -30,3 +27,10 @@ set.softtabstop = 4
 set.shiftwidth = 4
 set.fileencoding = 'utf-8'
 set.fileformat = 'unix'
+
+-- Set the leader key
+vim.g.mapleader = " "
+
+-- Treat '*.h' files as C headers (not C++)
+vim.g.c_syntax_for_h = true
+
