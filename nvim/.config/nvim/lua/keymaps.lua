@@ -139,7 +139,7 @@ legendary.bind_keymaps {
   end, "[DAP] Toggle breakpoint"),
 
   keymap("<leader>dB", function()
-    require("dap").dap.set_breakpoint(vim.fn.input "[DAP] Condition > ")
+    require("dap").set_breakpoint(vim.fn.input "[DAP] Condition > ")
   end, "[DAP] Toggle conditional breakpoint"),
 
   keymap("<leader>de", function()
