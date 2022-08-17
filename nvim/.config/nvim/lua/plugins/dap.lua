@@ -9,7 +9,7 @@ vim.fn.sign_define("DapBreakpointCondition", { text = "⦿", texthl = "DapBreakp
 
 -- Configure adapters
 
--- C++
+-- C/C++
 dap.adapters.cppdbg = {
   id = "cppdbg",
   type = "executable",
@@ -19,16 +19,23 @@ dap.adapters.cppdbg = {
   }
 }
 
-dap.configurations.cpp = {
+dap.configurations.c = {
   {
     name = "Launch file",
     type = "cppdbg",
     request = "launch",
+    cwd = "${workspaceFolder}",
     program = function()
       return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
     end,
-    cwd = "${workspaceFolder}",
     stopOnEntry = true,
+    setupCommands = {
+      {
+        text = '-enable-pretty-printing',
+        description =  'enable pretty printing',
+        ignoreFailures = false
+      },
+    },
   },
   {
     name = "Attach to gdbserver :1234",
@@ -41,8 +48,17 @@ dap.configurations.cpp = {
     program = function()
       return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
     end,
+    setupCommands = {
+      {
+        text = '-enable-pretty-printing',
+        description =  'enable pretty printing',
+        ignoreFailures = false
+      },
+    },
   },
 }
+
+dap.configurations.cpp = dap.configurations.c
 
 -- Configure virtual text
 
