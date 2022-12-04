@@ -13,12 +13,7 @@ return require("packer").startup {
     use "rmehri01/onenord.nvim"
 
     -- Define keymaps, commands and autocommands while building a legend
-    use {
-      "mrjones2014/legendary.nvim",
-      config = function()
-        require("legendary").setup()
-      end,
-    }
+    use "mrjones2014/legendary.nvim"
 
     -- Notification manager
     use "rcarriga/nvim-notify"
