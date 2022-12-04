@@ -135,6 +135,24 @@ return require("packer").startup {
       end,
     }
 
+    -- Mason
+    use {
+      "williamboman/mason.nvim",
+      config = function()
+        require("mason").setup {
+          ui = {
+            icons = {
+              package_installed = "✓",
+              package_pending = "➜",
+              package_uninstalled = "✗",
+            },
+          },
+        }
+      end,
+    }
+
+    use "williamboman/mason-lspconfig.nvim"
+
     -- Treesitter
     use {
       "nvim-treesitter/nvim-treesitter",
