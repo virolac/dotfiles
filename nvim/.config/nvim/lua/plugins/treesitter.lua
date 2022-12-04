@@ -1,13 +1,5 @@
 require("nvim-treesitter.parsers").get_parser_configs()
 
-local custom_captures = {
-  ["function.call"] = "LuaFunctionCall",
-  ["function.bracket"] = "Type",
-  ["namespace.type"] = "TSNamespaceType",
-}
-
-require("nvim-treesitter.highlight").set_custom_captures(custom_captures)
-
 local swap_prev, swap_next = (function()
   local swap_objects = {
     e = "@element",
