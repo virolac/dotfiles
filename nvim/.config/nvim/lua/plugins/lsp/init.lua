@@ -47,6 +47,12 @@ lspconfig.pyright.setup {
   capabilities = capabilities,
 }
 
+-- Ruby
+lspconfig.solargraph.setup {
+  on_attach = handlers.on_attach,
+  capabilities = capabilities,
+}
+
 -- Emmet
 lspconfig.emmet_ls.setup {
   on_attach = handlers.on_attach,

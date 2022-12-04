@@ -29,6 +29,7 @@ require("nvim-treesitter.configs").setup {
     "markdown",
     "python",
     "query",
+    "ruby",
     "rust",
     "toml",
     "tsx",
