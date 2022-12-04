@@ -3,7 +3,10 @@ require("bufferline").setup {
     numbers = "none",
     close_command = "bdelete! %d",
     left_mouse_command = "buffer %d",
-    indicator_icon = "▎",
+    indicator = {
+      style = "icon",
+      icon = "▎",
+    },
     buffer_close_icon = "",
     modified_icon = "●",
     left_trunc_marker = "",
