@@ -176,6 +176,11 @@ return require("packer").startup {
     }
 
     use {
+      "nvim-treesitter/nvim-treesitter-context",
+      requires = "nvim-treesitter/nvim-treesitter",
+    }
+
+    use {
       "JoosepAlviste/nvim-ts-context-commentstring",
       requires = "nvim-treesitter/nvim-treesitter",
     }
