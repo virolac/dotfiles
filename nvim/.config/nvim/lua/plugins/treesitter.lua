@@ -31,6 +31,8 @@ require("nvim-treesitter.configs").setup {
     "query",
     "rust",
     "toml",
+    "tsx",
+    "typescript",
   },
 
   highlight = {
