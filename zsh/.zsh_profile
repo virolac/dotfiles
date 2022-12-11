@@ -8,11 +8,12 @@ export VISUAL="nvim"
 # Aliases
 
 alias u="sudo pacman -Syy && sudo pacman -Su"
-alias v="nvim"
+alias e="nvim"
 alias ls="logo-ls"
 alias ll="logo-ls -l"
 alias la="logo-ls -Al"
 alias tms="tmux-sessionizer"
+alias rg="rg -L"
 
 # Keybindings
 
