@@ -6,3 +6,12 @@ telescope.load_extension "file_browser"
 telescope.load_extension "ui-select"
 telescope.load_extension "dap"
 telescope.load_extension "harpoon"
+
+telescope.setup {
+  defaults = {
+    file_ignore_patterns = {
+      ".git/",
+      "node_modules/",
+    },
+  },
+}
