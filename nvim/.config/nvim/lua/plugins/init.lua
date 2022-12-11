@@ -9,8 +9,9 @@ return require("packer").startup {
     -- Plugin manager
     use "wbthomason/packer.nvim"
 
-    -- Colorscheme
+    -- Colorschemes
     use "rmehri01/onenord.nvim"
+    use "folke/tokyonight.nvim"
 
     -- Define keymaps, commands and autocommands while building a legend
     use "mrjones2014/legendary.nvim"
@@ -52,6 +53,14 @@ return require("packer").startup {
     use {
       "nvim-lualine/lualine.nvim",
       config = load_config("lualine"),
+    }
+
+    -- Distraction-free coding
+    use {
+      "folke/zen-mode.nvim",
+      config = function()
+        require("zen-mode").setup {}
+      end
     }
 
     -- Override common UI functions with default implementations
