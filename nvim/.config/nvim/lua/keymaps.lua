@@ -102,6 +102,7 @@ legendary.setup {
     ---------
     -- LSP --
     ---------
+    describe("<C-h>", "[LSP] Show signature help", { "i" }),
     describe("K", "[LSP] Show hover information"),
     describe("gd", "[LSP] Jump to the definition"),
     describe("gt", "[LSP] Jump to the type definition"),

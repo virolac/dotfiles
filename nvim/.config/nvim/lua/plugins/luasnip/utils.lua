@@ -1,6 +1,6 @@
-local utils = {}
+local M = {}
 
-function utils.create_snippet(trigger, description, nodes, opts)
+function M.create_snippet(trigger, description, nodes, opts)
   local properties = {
     trig = trigger,
     name = trigger,
@@ -10,4 +10,4 @@ function utils.create_snippet(trigger, description, nodes, opts)
   return require("luasnip").s(properties, nodes, opts)
 end
 
-return utils
+return M

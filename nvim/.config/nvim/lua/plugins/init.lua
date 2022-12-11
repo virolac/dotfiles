@@ -119,7 +119,11 @@ return require("packer").startup {
     }
 
     -- Language Server Protocol
-    use { "neovim/nvim-lspconfig", config = load_config("lsp") }
+    use {
+      "neovim/nvim-lspconfig",
+      requires = "jose-elias-alvarez/null-ls.nvim",
+      config = require("plugins.lsp").setup(),
+    }
     use { "wbthomason/lsp-status.nvim" }
     use { "j-hui/fidget.nvim" }
     use { "nvim-lua/lsp_extensions.nvim" }

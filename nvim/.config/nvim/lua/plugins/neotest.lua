@@ -1,7 +1,7 @@
-local neotest = {}
+local M = {}
 local nnoremap = require("keymaps.utils").nnoremap
 
-function neotest.setup()
+function M.setup()
   require("neotest").setup {
     adapters = {
       require("neotest-python") {
@@ -26,4 +26,4 @@ nnoremap("<leader>nS", function() require("neotest").run.stop() end, "[Neotest] 
 nnoremap("<leader>ns", function() require("neotest").summary.toggle() end, "[Neotest] Summary")
 nnoremap("<leader>no", function() require("neotest").output.open({ enter = true }) end, "[Neotest] Output")
 
-return neotest
+return M

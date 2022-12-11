@@ -1,10 +1,17 @@
-local handlers = {}
+local M = {}
 
 local function register_keymaps(bufnr)
   local opts = { noremap = true, silent = true, buffer = bufnr }
+
+  local function inoremap(key, action)
+    vim.keymap.set("i", key, action, opts)
+  end
+
   local function nnoremap(key, action)
     vim.keymap.set("n", key, action, opts)
   end
+
+  inoremap("<C-h>", vim.lsp.buf.signature_help)
 
   nnoremap("K", vim.lsp.buf.hover)
   nnoremap("gd", vim.lsp.buf.definition)
@@ -19,17 +26,7 @@ local function register_keymaps(bufnr)
   nnoremap("<leader>ldl", "<cmd>Telescope diagnostics<CR>")
 end
 
-local function autoformat_on_save()
-  local formatGrp = vim.api.nvim_create_augroup("LspFormat", { clear = true })
-
-  vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = "<buffer>",
-    callback = vim.lsp.buf.format,
-    group = formatGrp,
-  })
-end
-
-function handlers.setup()
+function M.setup()
   local signs = {
     { name = "DiagnosticSignError", text = "" },
     { name = "DiagnosticSignWarn", text = "" },
@@ -70,9 +67,8 @@ function handlers.setup()
   })
 end
 
-function handlers.on_attach(_, bufnr)
+function M.on_attach(_, bufnr)
   register_keymaps(bufnr)
-  autoformat_on_save()
 end
 
-return handlers
+return M
