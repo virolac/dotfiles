@@ -10,8 +10,8 @@ local swap_prev, swap_next = (function()
 
   local p, n = {}, {}
   for key, obj in pairs(swap_objects) do
-    p[string.format("<M-p><M-%s>", key)] = obj
-    n[string.format("<M-n><M-%s>", key)] = obj
+    p[string.format("<M-%s><M-p>", key)] = obj
+    n[string.format("<M-%s><M-n>", key)] = obj
   end
 
   return p, n
@@ -40,7 +40,10 @@ require("nvim-treesitter.configs").setup {
     enable = true,
     use_languagetree = false,
     disable = { "json" },
-    custom_captures = custom_captures,
+  },
+
+  indent = {
+    enable = true,
   },
 
   refactor = {
