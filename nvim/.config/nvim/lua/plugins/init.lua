@@ -11,7 +11,7 @@ return require("packer").startup {
 
     -- Colorschemes
     use "rmehri01/onenord.nvim"
-    use "folke/tokyonight.nvim"
+    use { "rose-pine/neovim", as = "rose-pine" }
 
     -- Define keymaps, commands and autocommands while building a legend
     use "mrjones2014/legendary.nvim"
