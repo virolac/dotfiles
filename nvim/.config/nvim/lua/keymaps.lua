@@ -36,6 +36,11 @@ legendary.setup {
     -------------
     -- Editing --
     -------------
+    keymap("J", "mzJ`z", "Join with next line"),
+    keymap("K", ":move '<-2<CR>gv=gv", "Move selection up", { "v" }),
+    keymap("J", ":move '>+1<CR>gv=gv", "Move selection down", { "v" }),
+    keymap("n", "nzzzv", "Go to next match"),
+    keymap("N", "Nzzzv", "Go to previous match"),
     keymap("<C-s>", "<cmd>update<CR>", "Save the file"),
     keymap("<C-a>", "<Esc>I", "Go to the beginning of the line", { "i" }),
     keymap("<C-e>", "<Esc>A", "Go to the end of the line", { "i" }),
@@ -45,6 +50,7 @@ legendary.setup {
     -----------
     -- Files --
     -----------
+    keymap("<leader>.", vim.cmd.Ex, "Open current working directory"),
     keymap("<leader>ff", "<cmd>Telescope find_files<CR>", "Find file"),
     keymap("<leader>fr", "<cmd>Telescope oldfiles<CR>", "Recent files"),
     keymap("<leader>fg", "<cmd>Telescope live_grep<CR>", "Project grep"),
