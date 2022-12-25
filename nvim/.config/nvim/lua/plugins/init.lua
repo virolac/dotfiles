@@ -233,6 +233,7 @@ return require("packer").startup {
         "FixCursorHold.nvim",
         "neotest-python",
         "neotest-plenary",
+        "neotest-rspec",
         "neotest-vim-test",
       },
       requires = {
@@ -242,6 +243,7 @@ return require("packer").startup {
         "antoinemadec/FixCursorHold.nvim",
         "nvim-neotest/neotest-python",
         "nvim-neotest/neotest-plenary",
+        "olimorris/neotest-rspec",
         "nvim-neotest/neotest-vim-test",
       },
       module = { "neotest" },
