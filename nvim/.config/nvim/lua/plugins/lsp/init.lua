@@ -2,7 +2,7 @@ local M = {}
 
 function M.setup()
   local capabilities = vim.lsp.protocol.make_client_capabilities()
-  capabilities = vim.tbl_deep_extend("keep", capabilities, require("lsp-status").capabilities)
+  capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
   capabilities.textDocument.codeLens = { dynamicRegistration = false }
   capabilities.textDocument.completion.completionItem.snippetSupport = true
   capabilities.textDocument.completion.completionItem.resolveSupport = {

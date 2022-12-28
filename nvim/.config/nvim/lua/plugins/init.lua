@@ -122,9 +122,10 @@ return require("packer").startup {
     use {
       "neovim/nvim-lspconfig",
       requires = "jose-elias-alvarez/null-ls.nvim",
-      config = require("plugins.lsp").setup(),
+      config = function()
+        require("plugins.lsp").setup()
+      end,
     }
-    use { "wbthomason/lsp-status.nvim" }
     use { "j-hui/fidget.nvim" }
     use { "nvim-lua/lsp_extensions.nvim" }
     use { "onsails/lspkind-nvim" }
