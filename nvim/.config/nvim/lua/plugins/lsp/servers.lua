@@ -12,7 +12,13 @@ local servers_config = {
   },
   -- Emmet
   emmet_ls = {
-    filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
+    filetypes = {
+      "html", "php",
+      "css", "sass", "scss", "less",
+      "javascript", "javascriptreact",
+      "typescript", "typescriptreact",
+      "vue", "svelte"
+    },
     init_options = {
       html = {
         options = {

@@ -46,9 +46,11 @@ function M.setup(opts)
           "typescript",
           "typescriptreact",
           "vue",
+          "svelte",
           "json",
         },
       },
+      formatters.phpcsfixer,
     },
     on_attach = function(client, bufnr)
       opts.on_attach(client, bufnr)
