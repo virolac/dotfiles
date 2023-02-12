@@ -63,6 +63,12 @@ return require("packer").startup {
       end
     }
 
+    -- Markdown preview in the browser
+    use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+    })
+
     -- Override common UI functions with default implementations
     use "stevearc/dressing.nvim"
 
