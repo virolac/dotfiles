@@ -25,8 +25,13 @@ set.expandtab = true
 set.tabstop = 4
 set.softtabstop = 4
 set.shiftwidth = 4
-set.fileencoding = 'utf-8'
-set.fileformat = 'unix'
+set.fileencoding = "utf-8"
+set.fileformat = "unix"
+set.list = true
+set.listchars = {
+  tab = "»·",
+  trail = "~",
+}
 
 -- Set the leader key
 vim.g.mapleader = " "
