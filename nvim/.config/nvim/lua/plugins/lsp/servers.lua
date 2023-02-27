@@ -29,7 +29,7 @@ local servers_config = {
     },
   },
   -- Lua
-  sumneko_lua = {
+  lua_ls = {
     settings = {
       Lua = {
         runtime = {
@@ -63,7 +63,7 @@ local servers = {
   "pyright",
   "rust_analyzer",
   "solargraph",
-  "sumneko_lua",
+  "lua_ls",
   "tsserver",
 }
 
