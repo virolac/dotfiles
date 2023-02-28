@@ -16,7 +16,7 @@ continuation_indent_size = 2
 end_of_line = lf
 
 # default encoding
-charset = "utf-8"
+charset = utf-8
 
 # disable EOL detection
 detect_end_of_line = false
