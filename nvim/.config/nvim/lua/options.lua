@@ -33,9 +33,9 @@ set.listchars = {
   trail = "~",
 }
 
--- Set the leader key
+-- Set the leader and local ledaer keys
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- Treat '*.h' files as C headers (not C++)
 vim.g.c_syntax_for_h = true
-

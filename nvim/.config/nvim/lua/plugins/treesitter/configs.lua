@@ -1,4 +1,5 @@
 require("nvim-treesitter.parsers").get_parser_configs()
+require("ts_context_commentstring").setup {}
 
 local swap_prev, swap_next = (function()
   local swap_objects = {
