@@ -258,5 +258,10 @@ legendary.setup {
     keymap("<leader>no", function()
       require("neotest").output.open({ enter = true })
     end, "[Neotest] Output"),
+
+    -------------
+    -- Conform --
+    -------------
+    describe("<leader>cf", "[Conform] Format file or range (in visual mode)", { "n", "v" }),
   }
 }

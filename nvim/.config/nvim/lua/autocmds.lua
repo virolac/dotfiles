@@ -12,3 +12,11 @@ au("TextYankPost", {
   group = augroup("HighlightOnYank"),
   desc = "Briefly highlight yanked region",
 })
+
+-- Lint file
+au({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+  group = augroup("Lint"),
+  callback = function()
+    require("lint").try_lint()
+  end,
+})

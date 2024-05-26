@@ -17,7 +17,6 @@ return {
       }
 
       local handlers = require("plugins.lsp.handlers")
-      local null_ls = require("plugins.lsp.null_ls")
       local servers = require("plugins.lsp.servers")
 
       local opts = {
@@ -26,7 +25,6 @@ return {
       }
 
       handlers.setup()
-      null_ls.setup(opts)
       servers.setup(opts)
     end,
   },
